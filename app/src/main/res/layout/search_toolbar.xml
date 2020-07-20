@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/black_border_radius">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/white_border_radius"
+            android:drawableEnd="@android:drawable/ic_menu_search"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:drawableTint="@color/black"
+            android:gravity="start|center"
+            android:hint="Digite aqui para pesquisar..."
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/darkGray"
+            android:textSize="18sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

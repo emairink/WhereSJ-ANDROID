@@ -1,0 +1,162 @@
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <PreferenceCategory android:title="Geral">
+            <EditTextPreference
+                android:dialogTitle="Digite o nome"
+                android:icon="@drawable/wheretoandroid"
+                android:key="fantasia"
+                android:title="Nome fantasia" />
+
+            <EditTextPreference
+                android:dialogTitle="Endereço (Rua, Número - Bairro) "
+                android:icon="@android:drawable/ic_dialog_map"
+                android:key="endereco"
+                android:title="Endereço" />
+
+            <EditTextPreference
+                android:dialogTitle="Email"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:key="email"
+                android:title="Email" />
+            <EditTextPreference
+                android:dialogTitle="Digite o telefone"
+                android:icon="@android:drawable/ic_menu_call"
+                android:key="telefone"
+                android:title="Telefone" />
+
+            <EditTextPreference
+                android:dialogTitle="Endereço do site"
+                android:icon="@android:drawable/ic_menu_search"
+                android:key="website"
+                android:title="Website" />
+
+            <EditTextPreference
+                android:dialogTitle="Insira o CNPJ"
+                android:icon="@android:drawable/ic_input_get"
+                android:key="cnpj"
+                android:title="CNPJ" />
+
+            <!--CheckBoxPreference
+                android:key="checkbox"
+                android:summary="Tap to check if on or off"
+                android:title="Checkbox Preference" /-->
+
+
+            <!--RingtonePreference
+                android:key="ringtone"
+                android:showDefault="true"
+                android:showSilent="true"
+                android:summary="Pick a ringtone you like"
+                android:title="Ringtone Preference" /-->
+
+
+
+
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="Sobre">
+
+            <EditTextPreference
+                android:dialogTitle="Digite uma descrição para as pessoas conhecerem melhor o seu negócio:"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:key="textDescription"
+                android:title="Descrição" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory android:title="Localização">
+            <EditTextPreference
+                android:dialogTitle="Insira o CEP"
+                android:icon="@android:drawable/ic_input_get"
+                android:key="cep"
+                android:title="Cep" />
+
+            <EditTextPreference
+                android:dialogTitle="Latitude"
+                android:icon="@android:drawable/ic_menu_mylocation"
+                android:key="latitude"
+                android:title="Latitude" />
+
+            <EditTextPreference
+                android:dialogTitle="Longitude"
+                android:icon="@android:drawable/ic_menu_mylocation"
+                android:key="longitude"
+                android:title="Longitude" />
+
+
+        </PreferenceCategory>
+
+
+        <!--ListPreference
+            android:dialogTitle="Select duration"
+            android:entries="@array/settings_list_preference_titles"
+            android:entryValues="@array/settings_list_preference_values"
+            android:key="list"
+            android:summary="Click to show a list to choose from"
+            android:title="List Preference" />
+
+
+        <SwitchPreference
+            android:background="@drawable/bluebg"
+            android:defaultValue="true"
+            android:key="switch"
+            android:summary="Click to switch on or off"
+            android:title="Switch Preference" /-->
+
+
+
+        <!--PreferenceCategory android:title="Controle de visibilidade">
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="switch"
+                android:summary="Sua empresa não aparece mais na nossa lista"
+                android:title="Modo invisível">
+            </SwitchPreference>
+        </PreferenceCategory -->
+
+        <!--PreferenceCategory android:title="Conta">
+
+
+            <EditTextPreference
+                android:dialogTitle=""
+                android:icon="@drawable/ic_menu_manage"
+                android:key="senha"
+                android:summary="Alterar sua senha"
+                android:title="Alterar senha" />
+
+            <Preference
+                android:summary="Exclui sua conta e todos os seus dados"
+                android:title="Apagar conta">
+                <intent
+                    android:targetClass="weedle.Activity.ChangePassword"/>
+            </Preference>
+
+        </PreferenceCategory -->
+        <!-- ATIVAR DEPOIS (INTENT PARA ACTIVITY "CHANGEPASSWORD" e "EXCLUIR CONTA" -->
+        <!--Preference
+            android:summary="Click to start an activity"
+            android:title="Preference">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="weedle.Activity.UpdatePassword"
+                android:targetPackage="weedle.Activity" />
+        </Preference-->
+
+
+        <!--Preference android:title="Abrir navegador" >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="erick-winner.herokuapp.com" />
+        </Preference-->
+
+
+</PreferenceScreen>

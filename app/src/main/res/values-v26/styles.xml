@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+<resources>
+
+    <style name="Theme_Preferences_ACTIVITY" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Customize your theme here. -->
+
+    </style>
+</resources>

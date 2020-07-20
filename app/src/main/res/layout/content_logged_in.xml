@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundBlue"
+    tools:context=".activities.LoggedIn">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/authenticated_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/authenticated_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="170dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/no_conection_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Desculpe, sua solicitação não foi sucedida"
+        android:layout_gravity="center_vertical"
+        android:maxWidth="0in"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

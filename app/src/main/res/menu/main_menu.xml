@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item android:id="@+id/loginMenuItem"
+        android:title="Acessar sua conta" />
+    <item android:id="@+id/signUpMenuItem"
+        android:title="Cadastrar sua empresa"/>
+    <item android:id="@+id/bugReportMenuItem"
+        android:title="Informar um problema"/>
+
+    <item android:id="@+id/changeCityMenuItem"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:iconTint="@color/backgroundBlue"
+        app:showAsAction="always"
+        android:title="Mudar cidade"/>
+
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view"
+    >
+
+    <group android:checkableBehavior="single">
+        <item android:title="Principal">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@android:drawable/ic_menu_search"
+                    android:title="Pesquisar" />
+            </menu>
+        </item>
+    </group>
+    <group>
+        <item android:title="Contato">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_contact"
+                    android:icon="@android:drawable/ic_dialog_email"
+                    android:title="Fale Conosco" />
+            </menu>
+        </item>
+
+        <item android:title="Conta">
+            <menu>
+                <item
+                    android:id="@+id/nav_manage"
+                    android:icon="@android:drawable/ic_menu_edit"
+                    android:title="Alterar informações" />
+                <item
+                    android:id="@+id/nav_changePass"
+                    android:icon="@android:drawable/ic_secure"
+                    android:title="Alterar senha" />
+                <item
+                    android:id="@+id/nav_deleteAccount"
+                    android:icon="@android:drawable/ic_delete"
+                    android:title="Excluir minha conta" />
+            </menu>
+        </item>
+    </group>
+</menu>

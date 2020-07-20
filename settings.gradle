@@ -1,0 +1,9 @@
+/*
+ * Copyright (c) 2020.
+ * Developed by : Pocket Studio.
+ * Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+ * www.pocketstudio.com.br
+ */
+
+rootProject.name='Where SJ'
+include ':app'

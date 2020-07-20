@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="clip_vertical"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:src="@drawable/pngtoandroid" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/loginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/white_border_radius_noborder"
+                android:drawableLeft="@android:drawable/ic_input_add"
+                android:drawableTint="@color/darkGray"
+                android:maxLines="1"
+                android:hint="Email"
+                android:paddingLeft="10dp"
+                android:textColor="@color/whereBlue"
+                android:textColorHint="@color/darkGray" />
+
+            <TextView
+                android:id="@+id/wrongMail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginLeft="15dp"
+                android:text="*email problem"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/holo_red_light"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/loginPass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="0dp"
+                android:maxLines="1"
+                android:background="@drawable/white_border_radius_noborder"
+                android:drawableLeft="@android:drawable/ic_secure"
+                android:drawableTint="@color/darkGray"
+                android:hint="  Senha"
+                android:inputType="textPassword"
+                android:paddingLeft="17dp"
+                android:textColor="@color/whereBlue"
+                android:textColorHint="@color/darkGray" />
+
+            <TextView
+                android:id="@+id/wrongPass"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginLeft="15dp"
+                android:text="*password problema"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/holo_red_light"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="end"
+                android:text="Esqueceu sua senha ?"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/white_border_radius_noborder"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:onClick="handleLogin"
+                android:text="Fazer Login"
+                android:textColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/loginProgress"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    >
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/white_border_radius"
+        android:backgroundTint="@color/backgroundBlue"
+        android:textColor="@color/white"
+        android:text="Cadastre sua empresa"
+        />
+
+</LinearLayout>
+
+</LinearLayout>
+

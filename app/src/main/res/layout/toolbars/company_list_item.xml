@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_margin="5dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/pngtoandroid" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome da empresa"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:id="@+id/textAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço da empresa"
+            android:textColor="@color/darkGray"
+            />
+        <TextView
+            android:id="@+id/textPrimaryTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone da empresa"
+            android:textColor="@color/darkGray"
+            />
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email da empresa"
+            android:textColor="@color/darkGray"
+            />
+        <TextView
+            android:id="@+id/textWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Site da empresa"
+            android:textColor="@color/darkGray"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
