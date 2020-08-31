@@ -45,10 +45,8 @@ class LoggedIn : AppCompatActivity(),
 
     var companyList: MutableList<WhereCompany> = mutableListOf();
     lateinit var companyAdapter: CompanyAdapter
-
+    val sqliteDb : SQLiteDatabase = openDatabase("/data/user/0/com.pktstudio.wheresj/databases/where_user_data",null, OPEN_READWRITE)
     val API = Api()
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,7 +93,7 @@ class LoggedIn : AppCompatActivity(),
         val profilePictureView = headerView.findViewById<ImageView>(R.id.navLogo)
 
 
-        val sqliteDb : SQLiteDatabase = openDatabase("/data/user/0/com.pktstudio.wheresj/databases/where_user_data",null, OPEN_READWRITE);
+
         val cursor : Cursor = sqliteDb.rawQuery("SELECT uid, photoURL, fantasia, endereco, email, telefone, cep ,website, cidade, estado, pais, token FROM company", null)
         cursor.moveToFirst()
         val photourl = cursor.getString(1)
@@ -135,10 +133,14 @@ class LoggedIn : AppCompatActivity(),
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return super.onOptionsItemSelected(item)
+            val id = item.itemId
+        if (id === R.id.logout){
+            val i : Intent = Intent(applicationContext, MainActivity::class.java)
+            sqliteDb.execSQL("DELETE FROM company")
+            startActivity(i)
+            this.finish()
+        }
+         return true
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -192,6 +194,8 @@ class LoggedIn : AppCompatActivity(),
                                 topic.dataDeCriacao = a.getString("dataDeCriacao")
                                 topic.telefone = a.getString("telefone")
                                 topic._id = a.getString("_id")
+                                topic.website = a.getString("website")
+                                topic.description = a.getString("descricao")
                                 println("Erick2 :  $topic")
                                 companyList.add(topic)
                                 companyAdapter.notifyDataSetChanged()
@@ -246,6 +250,8 @@ class LoggedIn : AppCompatActivity(),
                                 searchResult.dataDeCriacao = a.getString("dataDeCriacao")
                                 searchResult.telefone = a.getString("telefone")
                                 searchResult._id = a.getString("_id")
+                                searchResult.website = a.getString("website")
+                                searchResult.description = a.getString("descricao")
                                 println("search :  $searchResult")
                                 companyList.add(searchResult)
                                 companyAdapter.notifyDataSetChanged()

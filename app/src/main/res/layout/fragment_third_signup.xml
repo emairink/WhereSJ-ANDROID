@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CompanySignUp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/right_border_radius_blur">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:paddingRight="25dp"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="Digite o seu nome ou de um responsável:"
+                />
+
+
+            <EditText
+                android:id="@+id/editText_nomeResponsavel"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:layout_height="50dp"/>
+
+          <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Ao clicar no botão abaixo você concorda com os"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="#5ccae7"
+                android:textStyle="bold"
+                android:text=" @Termos de uso"
+                />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_signup"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/textView_error_signup"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:textColor="@color/design_default_color_error"
+                />
+
+
+            <Button
+                android:id="@+id/button_finish_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:onClick="p3"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/gray_border_bg"
+                android:backgroundTint="@color/backgroundBlue"
+                android:padding="15dp"
+                android:text="Finalizar cadastro" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

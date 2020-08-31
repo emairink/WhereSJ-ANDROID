@@ -7,18 +7,15 @@
 
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
-
         <PreferenceCategory android:title="Geral">
             <EditTextPreference
                 android:dialogTitle="Digite o nome"
-                android:icon="@drawable/wheretoandroid"
                 android:key="fantasia"
                 android:title="Nome fantasia" />
 
             <EditTextPreference
                 android:dialogTitle="Endereço (Rua, Número - Bairro) "
-                android:icon="@android:drawable/ic_dialog_map"
+                android:icon="@android:drawable/ic_menu_mapmode"
                 android:key="endereco"
                 android:title="Endereço" />
 
@@ -35,13 +32,12 @@
 
             <EditTextPreference
                 android:dialogTitle="Endereço do site"
-                android:icon="@android:drawable/ic_menu_search"
+                android:icon="@drawable/site"
                 android:key="website"
                 android:title="Website" />
 
             <EditTextPreference
                 android:dialogTitle="Insira o CNPJ"
-                android:icon="@android:drawable/ic_input_get"
                 android:key="cnpj"
                 android:title="CNPJ" />
 
@@ -76,7 +72,6 @@
         <PreferenceCategory android:title="Localização">
             <EditTextPreference
                 android:dialogTitle="Insira o CEP"
-                android:icon="@android:drawable/ic_input_get"
                 android:key="cep"
                 android:title="Cep" />
 
@@ -95,6 +90,20 @@
 
         </PreferenceCategory>
 
+
+
+
+    <PreferenceCategory android:title="Premium">
+
+    <Preference
+        android:summary="Embeleze seu perfil"
+        android:title="Adicionar logomarca">
+    <intent
+        android:action="android.intent.action.VIEW"/>
+        <!--android:targetClass=""
+        android:targetPackage="" -->
+        </Preference>
+    </PreferenceCategory>
 
         <!--ListPreference
             android:dialogTitle="Select duration"

@@ -1,119 +1,27 @@
 {
   "project_info": {
-    "project_number": "915958509613",
-    "firebase_url": "https://hermes-c24d3.firebaseio.com",
-    "project_id": "hermes-c24d3",
-    "storage_bucket": "hermes-c24d3.appspot.com"
+    "project_number": "655458572827",
+    "firebase_url": "https://where-mediastore.firebaseio.com",
+    "project_id": "where-mediastore",
+    "storage_bucket": "where-mediastore.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:915958509613:android:e623ce305f4129460a48a4",
+        "mobilesdk_app_id": "1:655458572827:android:e62f4c72db223eb481b6be",
         "android_client_info": {
           "package_name": "com.pktstudio.wheresj"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "915958509613-i8u5sfb063gjur4v60ikileqlrvo2ffa.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.pktstudio.wheresj",
-            "certificate_hash": "0a3fffd1b942599384c0393f2599e203bcaf1ca2"
-          }
-        },
-        {
-          "client_id": "915958509613-6ibqec5kgekdb9512mtspu7i9nnp3699.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA2jjM_vdBLzPuIQlz7oFq3wirnNZhSvUE"
+          "current_key": "AIzaSyBqKH8puv8qCe89abYogJts79NhuqWCDhs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "915958509613-6ibqec5kgekdb9512mtspu7i9nnp3699.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:915958509613:android:8d0fc5032b55db1d",
-        "android_client_info": {
-          "package_name": "mercury.messenger.com.mercury"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "915958509613-s3jcshdo4318iibhev3l92rhs9ealucc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "mercury.messenger.com.mercury",
-            "certificate_hash": "e6d7d0785671c7070cb50bbc8ec2938c2db99e4a"
-          }
-        },
-        {
-          "client_id": "915958509613-6ibqec5kgekdb9512mtspu7i9nnp3699.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA2jjM_vdBLzPuIQlz7oFq3wirnNZhSvUE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "915958509613-6ibqec5kgekdb9512mtspu7i9nnp3699.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:915958509613:android:7927b6f5ef97ddc0",
-        "android_client_info": {
-          "package_name": "storage.android.com.storage"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "915958509613-3mnmk9ns8etj7dmekqaejet9rjlgjh7o.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "storage.android.com.storage",
-            "certificate_hash": "e6d7d0785671c7070cb50bbc8ec2938c2db99e4a"
-          }
-        },
-        {
-          "client_id": "915958509613-6ibqec5kgekdb9512mtspu7i9nnp3699.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA2jjM_vdBLzPuIQlz7oFq3wirnNZhSvUE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "915958509613-6ibqec5kgekdb9512mtspu7i9nnp3699.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

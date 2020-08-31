@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CompanySignUp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/blur_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="*Email"
+                />
+            <EditText
+                android:id="@+id/editText_email"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="*Senha"
+                />
+            <EditText
+                android:id="@+id/editText_senha"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:layout_height="50dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="12sp"
+                android:text="*Confirmar senha"
+                />
+            <EditText
+                android:id="@+id/editText_confSenha"
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/design_default_color_error"
+                android:id="@+id/authErrorTextView"
+                android:textStyle="bold"
+            />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:text="*Insira um email válido"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:text="*Insira uma senha com 8 caracteres no mínimo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:text="*Evite reutilizar suas senhas de outras redes ou de bancos "/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:onClick="p2"
+                android:background="@drawable/gray_border_bg"
+                android:backgroundTint="@color/backgroundBlue"
+                android:padding="15dp"
+                android:text="Continuar" />
+
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    </FrameLayout>

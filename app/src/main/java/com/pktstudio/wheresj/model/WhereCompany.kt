@@ -21,6 +21,9 @@ data class WhereCompany (
     var fantasia: String ?="",
     var photo_url: String ?="",
     //val segmentos: List<String>? ,
-    var telefone: String? =""
+    var telefone: String? ="",
+    var description: String? ="",
+    var website: String?
+) {
 
-)
+}

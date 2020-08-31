@@ -23,6 +23,7 @@
         <item name="colorAccent">@color/whereBlue</item>
     </style>
 
+
     <style name="whereBlueStatusBar" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/black</item>
@@ -38,6 +39,15 @@
     <style name="whereDefault.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 
     <style name="whereDefault.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!--style name="Theme_Preferences_ACTIVITY" parent="ThemeOverlay.AppCompat.Dark">
         <!- Customize your theme here. >

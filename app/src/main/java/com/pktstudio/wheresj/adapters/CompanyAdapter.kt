@@ -9,16 +9,10 @@ package com.pktstudio.wheresj.adapters
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.*
-import android.widget.AdapterView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.JsonArray
+import com.pktstudio.wheresj.activities.Profile
 import com.pktstudio.wheresj.R
-import com.pktstudio.wheresj.activities.Login
-import com.pktstudio.wheresj.activities.MainActivity
 import com.pktstudio.wheresj.model.WhereCompany
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.company_list_item.view.*
@@ -53,14 +47,23 @@ class CompanyAdapter (private val companyList : MutableList<WhereCompany>) : Rec
         address.text = compPosition.endereco
         pTel.text = compPosition.telefone
         email.text = compPosition.email
-        //site.text = compPosition.segmentos[0]
+        site.text = compPosition.website
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, Profile::class.java)
+            intent.putExtra("photoURL", compPosition.photo_url)
+            intent.putExtra("fantasia", compPosition.fantasia)
+            intent.putExtra("endereco", compPosition.endereco)
+            intent.putExtra("pTel", compPosition.telefone)
+            intent.putExtra("email", compPosition.email)
+            intent.putExtra("site", compPosition.website)
+            intent.putExtra("description", compPosition.description)
 
-        holder.itemView.setOnClickListener { v: View ->
-            //val intent = Intent(holder.itemView.context, Login::class.java)
-            //holder.itemView.context.startActivity(intent)
+            //intent.putExtra("site", "Site não definido") // TODO()
+            //intent.putExtra("description", ) //TODO()
+            holder.itemView.context.startActivity(intent)
 
         }
-        holder.itemView.setOnLongClickListener { v : View ->
+        holder.itemView.setOnLongClickListener {
             //Toast.makeText(holder.itemView.context, "Longo click", Toast.LENGTH_LONG).show()
             true
         }

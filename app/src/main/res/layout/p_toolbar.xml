@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.appcompat.widget.Toolbar
+    android:layout_height="50dp"
+    android:id="@+id/profileToolbar"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:elevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    />
+
+
+
+

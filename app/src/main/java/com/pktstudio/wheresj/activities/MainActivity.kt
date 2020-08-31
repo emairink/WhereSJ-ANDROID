@@ -8,6 +8,8 @@
 package com.pktstudio.wheresj.activities
 
 import android.content.Intent
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -28,8 +30,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.*
 import com.androidnetworking.interfaces.JSONObjectRequestListener
+import com.google.firebase.database.*
 import com.pktstudio.wheresj.api.Api
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.main_toolbar.*
 import kotlinx.android.synthetic.main.search_toolbar.*
 import org.json.JSONArray
@@ -39,13 +41,35 @@ open class MainActivity : AppCompatActivity() {
 
     var companyList: MutableList<WhereCompany> = mutableListOf();
     lateinit var companyAdapter: CompanyAdapter
-
     val API = Api()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        fastAndroidNetworkReq()
+
+
+        try {
+            val sqliteDb: SQLiteDatabase = SQLiteDatabase.openDatabase(
+                "/data/user/0/com.pktstudio.wheresj/databases/where_user_data",
+                null,
+                SQLiteDatabase.OPEN_READWRITE
+            );
+
+            val cursor: Cursor = sqliteDb.rawQuery("SELECT  token FROM company", null)
+            cursor.moveToFirst()
+            val token = cursor.getString(0)
+
+            if (token !== null) {
+                val i: Intent = Intent(applicationContext, LoggedIn::class.java)
+                startActivity(i)
+                this.finish()
+            }
+        }catch (e : Exception){
+            //DO NOTHING
+        }
+
+            fastAndroidNetworkReq()
+
 
         //Toolbar config
         val mt : Toolbar = findViewById(R.id.main_toolbar)
@@ -62,10 +86,6 @@ open class MainActivity : AppCompatActivity() {
         home_recycler_view.layoutManager = GridLayoutManager(applicationContext, 1)
         /** Lista horizontal **/
         //home_recycler_view.layoutManager = LinearLayoutManager(this,  RecyclerView.VERTICAL, false)
-
-
-
-
 
 /*
 
@@ -142,11 +162,16 @@ open class MainActivity : AppCompatActivity() {
             val intent : Intent = Intent(this@MainActivity, Login::class.java)
             startActivity(intent)
             return true;
-        } else {
-            Toast.makeText(applicationContext, "Clicou em outro", Toast.LENGTH_LONG).show();
+        } else if(i == R.id.signUpMenuItem) {
+            val intent : Intent = Intent(this@MainActivity, CompanySignUp::class.java)
+            startActivity(intent)
+            return true
+        }else {
+            Toast.makeText(applicationContext, "Esta opção ainda não foi implementada", Toast.LENGTH_LONG).show()
             return super.onOptionsItemSelected(item)
+            }
         }
-    }
+
      fun fastAndroidNetworkReq() {
 
         AndroidNetworking.initialize(applicationContext)
@@ -161,9 +186,9 @@ open class MainActivity : AppCompatActivity() {
                             companyList.clear()
                             for (pos in 0 until response.length()){
                                 var companies = response.get(pos)
-                                var a = response.getJSONObject(pos)
-                                println("Erick :  $a")
-                                Log.i("Teste1", companies.toString())
+                                val a = response.getJSONObject(pos)
+                                //println("Erick :  $a")
+                                //Log.i("Teste1", companies.toString())
                                 val newjson = Gson().toJson(a)
 
                                 val topic = Gson().fromJson(newjson, WhereCompany::class.java)
@@ -176,7 +201,9 @@ open class MainActivity : AppCompatActivity() {
                                 topic.dataDeCriacao = a.getString("dataDeCriacao")
                                 topic.telefone = a.getString("telefone")
                                 topic._id = a.getString("_id")
-                                println("Erick2 :  $topic")
+                                topic.website = a.getString("website")
+                                topic.description = a.getString("descricao")
+
                                 companyList.add(topic)
                                 companyAdapter.notifyDataSetChanged()
                             }
@@ -184,13 +211,11 @@ open class MainActivity : AppCompatActivity() {
                         home_recycler_view.visibility = View.VISIBLE
                         progress.visibility = View.GONE
                     } catch (e: Exception) {
-                        Toast.makeText(applicationContext,"tryCatch error:" + e.message, Toast.LENGTH_LONG).show()
                         Log.i("error1", e.message.toString())
 
                     }
                 }
                 override fun onError(anError: ANError?) {
-                    Toast.makeText(applicationContext, "onError :" + anError.toString(), Toast.LENGTH_LONG).show()
                     Log.i("error2", anError.toString())
                     progress.visibility = View.GONE
                     no_conection_text.visibility = View.VISIBLE
@@ -225,11 +250,14 @@ open class MainActivity : AppCompatActivity() {
                             searchResult.fantasia = a.getString("fantasia")
                             searchResult.email = a.getString("email")
                             searchResult.endereco = a.getString("endereco")
-                            searchResult.__v = a.getInt("__v")
-                            searchResult.dataDeCriacao = a.getString("dataDeCriacao")
+                         //   searchResult.__v = a.getInt("__v")
+                         //   searchResult.dataDeCriacao = a.getString("dataDeCriacao")
                             searchResult.telefone = a.getString("telefone")
                             searchResult._id = a.getString("_id")
-                            println("search :  $searchResult")
+                            searchResult.website = a.getString("website")
+                            searchResult.website = a.getString("website")
+                            searchResult.description = a.getString("descricao")
+
                             companyList.add(searchResult)
                             companyAdapter.notifyDataSetChanged()
                         }

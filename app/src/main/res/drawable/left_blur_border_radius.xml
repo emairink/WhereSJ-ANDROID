@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020.
+  ~ Developed by : Pocket Studio.
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ www.pocketstudio.com.br
+  -->
+
+    <shape xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        tools:ignore="MissingDefaultResource">
+        <solid android:color="@color/blur"/>
+        <corners android:bottomLeftRadius="130dp"/>
+    </shape>

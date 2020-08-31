@@ -2,7 +2,7 @@
 <!--
   ~ Copyright (c) 2020.
   ~ Developed by : Pocket Studio.
-  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: pocketstudioapp@gmail.com |
+  ~ Contact: tel:  +55 (61) 99948-6774 | Skype & Mail: contato@pocketstudio.com.br |
   ~ www.pocketstudio.com.br
   -->
 
@@ -15,4 +15,6 @@
     <color name="backgroundBlue">#0689AC</color>
     <color name="softGray">#f0f0f0</color>
     <color name="darkGray">#d0d0d0</color>
+    <color name="blur">#355CCAE7</color>
+    <color name="yellow">#FFD740</color>
 </resources>

@@ -18,6 +18,9 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.androidnetworking.AndroidNetworking
@@ -28,8 +31,8 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.pktstudio.wheresj.R
-import kotlinx.android.synthetic.main.activity_login0.*
 import com.pktstudio.wheresj.api.*
+import kotlinx.android.synthetic.main.activity_login0.*
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -37,16 +40,30 @@ import org.json.JSONObject
 
 class Login : AppCompatActivity() {
 
+    //var wrongMail = findViewById<TextView>(R.id.wrongMail)
+    //var loginProgress = findViewById<ProgressBar>(R.id.loginProgress)
+    //var openSignUp = findViewById<Button>(R.id.openSignUp)
+    //var wrongPass = findViewById<TextView>(R.id.wrongPass)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login0)
+
+
+
+        openSignUp.setOnClickListener {
+            val i = Intent(this, CompanySignUp::class.java)
+            startActivity(i)
+        }
+
+
     }
 
 
     fun handleLogin(view : View) {
         loginProgress.visibility = View.VISIBLE
-        val email =  "pocketstudioapp@gmail.com" //loginEmail.text
-        val senha =  "1q@w##4R" //loginPass.text
+        val email =  loginEmail.text
+        val senha =  loginPass.text
 
 
         if (email.isEmpty()) {
@@ -62,7 +79,7 @@ class Login : AppCompatActivity() {
             wrongPass.visibility = View.GONE
         }
 
-        val api = Api()
+        val API = Api()
         val jsonLogin = JSONObject()
 
         try {
@@ -73,7 +90,7 @@ class Login : AppCompatActivity() {
             Log.i("loginError: ", e.toString())
             loginProgress.visibility = View.GONE
         }
-        AndroidNetworking.post(api.BASEURL + api.LOGINURL)
+        AndroidNetworking.post(API.BASEURL + API.LOGINURL)
             .addJSONObjectBody(jsonLogin) // posting json
             .setPriority(Priority.MEDIUM)
             .build()
@@ -107,7 +124,8 @@ class Login : AppCompatActivity() {
                        // Log.i("db", sqliteDb.toString());
                         val intent : Intent = Intent(applicationContext, LoggedIn::class.java);
                         //intent.putExtra("database", sqliteDb.toString())
-                        startActivity(intent);
+                        startActivity(intent)
+                        finish()
                     }catch (e : Exception){
                         //Log.i("trycatch: " , e.message.toString())
                     }
